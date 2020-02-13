@@ -1,6 +1,13 @@
 // write your javascript code here.
 // feel free to change the pre-set attributes as you see fit
 
+// OUTSIDE SOURCE USED: I utilized some outside help to implement the double click
+// functionality. I used this source: https://stackoverflow.com/questions/18307185/d3-how-do-i-set-click-event-and-dbclick-event-at-the-same-time?noredirect=1&lq=1
+// I modified it to fit the purposes of this assignment. 'isDoubleClicked' is used to determine if the cirlce has been clicked twice and once the eventhandler 
+// recognized the circle has been clicked it first detects whether it has been clicked within 250 miliseconds by updating the isDoubleClicked on the first click.
+// If the user has already clicked once and clicks again within the 250 miliseconds, the 'if' of the changeColor2 function will recognize it as true, leading to modifying the color
+// of the cirlce. Lastly, if the 250 miliseconds expires before a second click is reached, the 'isDoubleClicked' variable is set to false again as to not affect future clicks and ensure a double click on the next event.
+
 let margin = {
     top: 60,
     left: 50,
